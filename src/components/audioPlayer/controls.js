@@ -9,7 +9,6 @@ export default function Controls({
   setIsPlaying,
   handleNext,
   handlePrev,
-  handlePlay
 }) {
   return (
     <IconContext.Provider value={{ size: "35px", color: "#C4D0E3" }}>
@@ -21,7 +20,7 @@ export default function Controls({
           className={
             isPlaying ? "play-pause-btn flex active" : "play-pause-btn flex"
           }
-          onClick={handlePlay}
+          onClick={() => setIsPlaying(!isPlaying)}
         >
           {isPlaying ? <FaPause /> : <IoPlay />}
         </div>

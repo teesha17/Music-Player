@@ -78,9 +78,7 @@ export default function AudioPLayer({
       clearInterval(intervalRef.current);
     };
   }, []);
-  const handlePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
+  
 
   const handleNext = () => {
     if (currentIndex < total.length - 1) {
@@ -125,7 +123,6 @@ export default function AudioPLayer({
             setIsPlaying={setIsPlaying}
             handleNext={handleNext}
             handlePrev={handlePrev}
-            handlePlay={handlePlay}
             total={total}
           />
         </div>
